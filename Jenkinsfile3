@@ -16,7 +16,7 @@ pipeline {
                     sh 'mvn package'
                 }
                 }
-                stage('Mave Deploy'){
+                stage('Maven Deploy'){
                     steps{
                         sh 'Deploying the war file to the server'
                     }
