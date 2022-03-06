@@ -1,0 +1,15 @@
+pipeline{
+agent any
+stages{
+stage('Gitcheckout'){
+steps{
+git credentialsId: 'github credentials', url: 'https://github.com/mdsameullah/imo1'
+}
+}
+stage('Example build'){
+steps{
+echo "Hellow echo world"
+}
+}
+}
+}
