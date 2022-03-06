@@ -1,0 +1,25 @@
+pipeline {
+agent any
+stages{
+stage("SCM"){
+steps{
+git credentialsId: 'github credentials', url: 'https://github.com/mdsameullah/imo1'
+}
+}
+stage("Welcome world"){
+steps{
+echo "welcome to world"
+}
+}
+stage("Welcome to India"){
+steps{
+echo "Welcome to India"
+}
+}
+stage("Welcome to Andhrapradesh"){
+steps{
+echo "Welcome to Andhrapradesh"
+}
+}
+}
+}
