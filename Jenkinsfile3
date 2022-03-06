@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages{
+        stage('Git Clonet'){
+            steps{
+               git credentialsId: 'github credentials', url: 'https://github.com/mdsameullah/imo1.git' 
+            }
+            }
+        stage('Maven Test'){
+            steps{
+                sh 'Mvn test'
+            }
+            }
+            stage('Maven Build'){
+                steps{
+                    sh 'mvn package'
+                }
+                }
+                stage('Mave Deploy'){
+                    steps{
+                        sh 'Deploying the war file to the server'
+                    }
+                    }
+                }
+}
